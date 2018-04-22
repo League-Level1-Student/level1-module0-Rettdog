@@ -25,12 +25,14 @@ public class DrumKit extends MouseAdapter {
     public static void main(String[] args) throws Exception {
    	 new DrumKit().getGoing();
     }
+Cymbal cymby = new Cymbal();
 
     private void getGoing() throws MalformedURLException {
    	 // 1. Make a JFrame variable and initialize it using "new JFrame()"
    	 JFrame frame = new JFrame();
    	 // 2. Make the frame visible
    	 frame.setVisible(true);
+   	 cymby.crash();
    	 // 3. Set the size of the frame
    	 frame.setSize(200,200);
    	 // 4. Set the title of the frame
@@ -104,6 +106,12 @@ drumLabelWithImage.addMouseListener(this);
     }
     
 }
-
+class Cymbal{
+	 void crash() {
+		AudioClip sound = JApplet.newAudioClip(getClass().getResource("cymbal.wav"));
+	   	 sound.play();
+	}
+	
+}
 
 

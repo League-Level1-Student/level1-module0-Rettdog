@@ -32,21 +32,32 @@ public class BodyPartQuiz {
 
 		// 1. Make an int variable to hold the score.
 int score = 0;
-
+String name = null;
 		// 2. Set the size of the window in the initializeGui() method below
 
 		for (int i = 0; i < 4; i++) {
+			switch(i) {
+			case 0: name = "Arnold";
+					break;
+			case 1: name = "Leonardo";
+					break;
+			case 2: name = "Morgan";
+					break;
+			case 3: name = "Jack";
+					break;
 			
+			
+			}
 			// 4. Ask the user who this person is and store their answer
 			String guess= JOptionPane.showInputDialog("who is this?");
 			
 			// 5. Check their answer. If they guessed correctly:
 			// -- Tell them they are right and increase the score by 1
-if(guess.equals("")) {
+if(guess.equals(name)) {
 	score++;
 	JOptionPane.showMessageDialog(null, "Nice job. Your score is "+score);
 }else {
-	JOptionPane.showMessageDialog(null, "Incorrect. the person is ");
+	JOptionPane.showMessageDialog(null, "Incorrect. The person is "+name);
 }
 			// 6. Otherwise:
 			// -- Tell them they are wrong and who the person is
@@ -77,6 +88,7 @@ if(guess.equals("")) {
 	private void initializeGui() {
 		initializeImageList();
 		imageIterator = imageList.iterator();
+		
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.add(panel);
 		
@@ -96,6 +108,7 @@ if(guess.equals("")) {
 	ArrayList<JLabel> imageList = new ArrayList<JLabel>();
 	Iterator<JLabel> imageIterator;
 
+
 	private void initializeImageList() {
 		JLabel imageLabel = loadImage(firstImage);
 		imageList.add(imageLabel);
@@ -106,6 +119,7 @@ if(guess.equals("")) {
 		imageLabel = loadImage(fourthImage);
 		imageList.add(imageLabel);
 	}
+	
 
 	private JLabel getNextImage() {
 		if (imageIterator.hasNext())
@@ -113,4 +127,5 @@ if(guess.equals("")) {
 		System.exit(0);
 		return new JLabel();
 	}
+	
 }
