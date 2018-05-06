@@ -28,7 +28,7 @@ public class FortuneCookie implements ActionListener {
 		int rand = new Random().nextInt(5);
 		switch (rand) {
 		case 0:
-			JOptionPane.showMessageDialog(null, "You will win the lottery during you lifetime.");
+			JOptionPane.showMessageDialog(null, "You will win the lottery during your lifetime.");
 			break;
 		case 1:
 			JOptionPane.showMessageDialog(null, "You will click the x");
@@ -40,7 +40,7 @@ public class FortuneCookie implements ActionListener {
 			JOptionPane.showMessageDialog(null, "How are you");
 			break;
 		case 4:
-			JOptionPane.showMessageDialog(null, "You future is grim");
+			JOptionPane.showMessageDialog(null, "Your future is grim");
 			break;
 
 		}

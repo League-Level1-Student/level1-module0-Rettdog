@@ -14,10 +14,11 @@ public class JackInTheBox implements ActionListener {
 	int i = 0;
 
 	public static void main(String[] args) {
-		Start();
+		JackInTheBox jack = new JackInTheBox();
+		jack.Start();
 	}
 
-	public static void Start() {
+	public void Start() {
 		JFrame frame = new JFrame();
 		JButton button = new JButton();
 		button.setText("Surprise!!!!!!!!");
